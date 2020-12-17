@@ -30,7 +30,6 @@ export default class CommentBar extends React.Component {
                 });
         }
     }
-
     updateSearch = (search) => {
         this.setState({
             search: search});
