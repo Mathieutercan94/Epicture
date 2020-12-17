@@ -32,15 +32,13 @@ export default class LoginComponent extends React.Component {
         }
         return (0);
     };
-
     render() {
         return (
             <WebView
                 ref="webview"
                 source={{uri: 'https://api.imgur.com/oauth2/authorize?client_id=00d22fd0ab51572&response_type=token'}}
-                    onNavigationStateChange={this.handleNavigation}
+                onNavigationStateChange={this.handleNavigation}
             />
         );
     }
 }
-co

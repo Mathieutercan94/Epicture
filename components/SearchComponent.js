@@ -42,11 +42,11 @@ export default class SearchComponent extends React.Component {
         }
     }
 
-
     render() {
         if (this.props.search) {
             if (!!(this.state.images) && this.state.array) {
-                const imagesDiv = this.state.array.map((img, k) =>  <LikeComponents k={k} img={img.link} id={img.id} image={img}/>);
+                const imagesDiv = this.state.array.map((img, k) => <LikeComponents k={k} img={img.link} id={img.id}
+                                                                                   image={img}/>);
                 return (
                     <ScrollView>
                         {imagesDiv}
@@ -54,8 +54,8 @@ export default class SearchComponent extends React.Component {
                 );
             } else {
                 return (<Image
-                        source={{uri: 'https://cdn.discordapp.com/attachments/628569352412594205/769328275687735316/image1.jpg'}}
-                        style={{width: 420, height: 800}}/>);
+                    source={{uri: 'https://cdn.discordapp.com/attachments/628569352412594205/769328275687735316/image1.jpg'}}
+                    style={{width: 420, height: 800}}/>);
             }
         } else {
             return (<Image

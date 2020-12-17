@@ -7,23 +7,25 @@ class SearchScreen extends React.Component {
     state = {
         search: "",
     };
+
     updateSearch = (search) => {
         this.setState({
-            search: search});
+            search: search
+        });
     };
 
     render() {
         const {search} = this.state;
         return (
-                <View>
-                   <SearchBar
-                        placeholder="Type Here..."
-                        onChangeText={this.updateSearch}
-                        value={search}/>
-                        <SearchComponent search={search}/>
-                </View>
-            );
-        }
+            <View>
+                <SearchBar
+                    placeholder="Type Here..."
+                    onChangeText={this.updateSearch}
+                    value={search}/>
+                <SearchComponent search={search}/>
+            </View>
+        );
+    }
 }
 
 export default SearchScreen;

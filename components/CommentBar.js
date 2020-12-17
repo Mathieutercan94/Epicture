@@ -7,6 +7,7 @@ export default class CommentBar extends React.Component {
     constructor(props) {
         super(props);
     }
+
     state = {
         search: '',
     };
@@ -32,15 +33,17 @@ export default class CommentBar extends React.Component {
     }
     updateSearch = (search) => {
         this.setState({
-            search: search});
+            search: search
+        });
     };
-        render() {
+
+    render() {
         const {search} = this.state;
-        return ( <View>
-            <SearchBar
-                placeholder="Comment here"
-                onChangeText={this.updateSearch}
-                value={search}/>
+        return (<View>
+                <SearchBar
+                    placeholder="Comment here"
+                    onChangeText={this.updateSearch}
+                    value={search}/>
                 <Button title={"send"} onPress={this.send}/>
             </View>
         );

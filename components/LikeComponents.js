@@ -6,7 +6,6 @@ import CommentBar from './CommentBar';
 
 export default class LikeComponents extends React.Component {
     constructor(props) {
-
         super(props);
         this.setState({
             props: props,
@@ -75,10 +74,8 @@ export default class LikeComponents extends React.Component {
     };
 
     render() {
-
-
         return (
-            <View style={{flex: 1, backgroundColor:"red"}}>
+            <View style={{flex: 1, backgroundColor: "red"}}>
                 <View>
                     <Image key={this.props.k} source={{uri: this.props.img}}
                            style={{width: 410, height: 410}}/>
@@ -92,7 +89,7 @@ export default class LikeComponents extends React.Component {
                     </View>
                 </View>
                 <View>
-                    <CommentBar id ={this.props.id}/>
+                    <CommentBar id={this.props.id}/>
                 </View>
             </View>
         );

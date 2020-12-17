@@ -3,11 +3,9 @@ import React from 'react';
 import GetImage from './GetImage';
 
 export default class HomeScreen extends React.Component {
-
     state = {
         count: 0
     }
-
     render() {
 
         return (

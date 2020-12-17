@@ -12,6 +12,7 @@ export default class GetImage extends React.Component {
         images: null,
         array: null,
     };
+
     spin() {
         this.spinValue.setValue(0);
         Animated.timing(
@@ -35,7 +36,7 @@ export default class GetImage extends React.Component {
             method: 'GET',
             headers: myHeaders,
         })
-        const json =  await result.json();
+        const json = await result.json();
         this.setState({
             images: json.data,
         });
@@ -57,7 +58,8 @@ export default class GetImage extends React.Component {
             outputRange: ['0deg', '360deg'],
         });
         if (!!(this.state.images) && this.state.array) {
-            const imagesDiv = this.state.array.map((img, k) => <LikeComponents k={k} img={img.link} id={img.id} image={img}/>);
+            const imagesDiv = this.state.array.map((img, k) => <LikeComponents k={k} img={img.link} id={img.id}
+                                                                               image={img}/>);
 
             return (
                 <ScrollView>
